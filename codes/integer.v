@@ -72,3 +72,62 @@ Mul * = -107   // not 149
 
 ➤ Power
 9 ** 2 = 81
+
+
+ex 2:
+
+data1 = -45;
+data2 = 9;
+🔍 3️⃣ Operation Results
+➤ Addition
+-45 + 9 = -36
+
+✔ Works correctly
+
+➤ Subtraction
+-45 - 9 = -54
+
+✔ Correct
+
+⚠️ Multiplication (Important)
+-45 * 9 = -405
+
+👉 But 8-bit signed cannot store -405
+
+🔹 What happens?
+
+-405 in binary → truncated to 8 bits
+Result becomes wrong due to overflow
+
+👉 You may see some unexpected number (wrap-around)
+
+➤ Division
+-45 / 9 = -5
+
+✔ Correct (integer division)
+
+➤ Modulus
+-45 % 9 = 0
+
+✔ Correct (no remainder)
+
+➤ Power
+9 ** 2 = 81
+
+✔ Same as before
+
+🧠 4️⃣ Another Case (Both Negative)
+data1 = -20;
+data2 = -5;
+Results:
+Operation	Result
+Add	-25
+Sub	-15
+Mul	+100
+Div	+4
+Mod	0
+
+👉 Rules:
+
+(-) × (-) = +
+(-) ÷ (-) = +
